@@ -1,4 +1,4 @@
-﻿#SingleInstance Force
+#SingleInstance Force
 SetTitleMatchMode, 2
 #InstallKeybdHook
 gameWindow := "ahk_exe DELTARUNE.exe"
@@ -105,4 +105,8 @@ if (WinActive(gameWindow)) {
 return
 
 ; exit
-~Esc::ExitApp
+*Esc::
+SendInput, {Ctrl up}
+SendInput, {Shift up}
+SendInput, {NumpadEnter up}
+ExitApp
